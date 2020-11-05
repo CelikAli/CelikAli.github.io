@@ -1,4 +1,3 @@
-import React from "react";
 import image from "../assets/img/profile.jpeg";
 
 function Navigation(props) {

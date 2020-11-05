@@ -34,9 +34,9 @@
   ],
   "education": [
     {
-      "university": "Indian Institute of Information Technology Allahabad",
+      "schoolName": "Indian Institute of Information Technology Allahabad",
       "degree": "Bachelor of Technology",
-      "gpa": "12.34",
+      "major": "Computer Engineering and Computer Science",
       "fromDate": "August 2016",
       "toDate": "Present"
     }
