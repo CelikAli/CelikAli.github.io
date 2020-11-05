@@ -4,6 +4,7 @@ import About from "./Components/About";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
+import Interests from "./Components/Interests";
 import profileData from "./profileData.json";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     experience: profileData.experience,
     education: profileData.education,
     skills: profileData.skills,
+    interests: profileData.interests,
   });
 
   return (
@@ -22,6 +24,7 @@ function App() {
         <Experience experience={pageState.experience} />
         <Education education={pageState.education} />
         <Skills skills={pageState.skills} />
+        <Interests interests={pageState.interests} />
       </div>
     </div>
   );
