@@ -1,4 +1,5 @@
 import image from "../assets/img/profile.jpeg";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navigation(props) {
   return (
@@ -6,7 +7,7 @@ function Navigation(props) {
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
-      <a className="navbar-brand js-scroll-trigger" href="#page-top">
+      <Link className="navbar-brand" onClick={scrollToTop}>
         <span className="d-block d-lg-none">
           {props.landing.firstName} {props.landing.lastName}
         </span>
@@ -17,7 +18,7 @@ function Navigation(props) {
             alt=""
           />
         </span>
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -32,34 +33,83 @@ function Navigation(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#about">
+            <Link
+              className="nav-link"
+              activeClass="active"
+              to="about"
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              duration={500}
+              delay={100}
+            >
               About
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#experience">
+            <Link
+              className="nav-link"
+              activeClass="active"
+              to="experience"
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              duration={500}
+              delay={100}
+            >
               Experience
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#education">
+            <Link
+              className="nav-link"
+              activeClass="active"
+              to="education"
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              duration={500}
+              delay={100}
+            >
               Education
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#skills">
+            <Link
+              className="nav-link"
+              activeClass="active"
+              to="skills"
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              duration={500}
+              delay={100}
+            >
               Skills
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link js-scroll-trigger" href="#interests">
+            <Link
+              className="nav-link"
+              activeClass="active"
+              to="interests"
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              duration={500}
+              delay={100}
+            >
               Interests
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
     </nav>
   );
+}
+
+function scrollToTop() {
+  scroll.scrollToTop();
 }
 
 export default Navigation;

@@ -20,11 +20,11 @@ function App() {
     <div>
       <Navigation landing={pageState.landing} />
       <div className="container-fluid p-0">
-        <About landing={pageState.landing} />
-        <Experience experience={pageState.experience} />
-        <Education education={pageState.education} />
-        <Skills skills={pageState.skills} />
-        <Interests interests={pageState.interests} />
+        <About name="about" landing={pageState.landing} />
+        <Experience name="experience" experience={pageState.experience} />
+        <Education name="education" education={pageState.education} />
+        <Skills name="skills" skills={pageState.skills} />
+        <Interests name="interests" interests={pageState.interests} />
       </div>
     </div>
   );
