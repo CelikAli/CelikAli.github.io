@@ -2,12 +2,22 @@ import image from "../assets/img/profile.jpeg";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navigation(props) {
+  const navigationLinks = [
+    "about",
+    "experience",
+    "education",
+    "skills",
+    "interests",
+  ];
+
+  const linkStyle = { cursor: "pointer" };
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
-      <Link className="navbar-brand" onClick={scrollToTop}>
+      <Link className="navbar-brand" style={linkStyle} onClick={scrollToTop}>
         <span className="d-block d-lg-none">
           {props.landing.firstName} {props.landing.lastName}
         </span>
@@ -32,76 +42,25 @@ function Navigation(props) {
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              className="nav-link"
-              activeClass="active"
-              to="about"
-              spy={true}
-              hashSpy={true}
-              smooth={true}
-              duration={500}
-              delay={100}
-            >
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className="nav-link"
-              activeClass="active"
-              to="experience"
-              spy={true}
-              hashSpy={true}
-              smooth={true}
-              duration={500}
-              delay={100}
-            >
-              Experience
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className="nav-link"
-              activeClass="active"
-              to="education"
-              spy={true}
-              hashSpy={true}
-              smooth={true}
-              duration={500}
-              delay={100}
-            >
-              Education
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className="nav-link"
-              activeClass="active"
-              to="skills"
-              spy={true}
-              hashSpy={true}
-              smooth={true}
-              duration={500}
-              delay={100}
-            >
-              Skills
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              className="nav-link"
-              activeClass="active"
-              to="interests"
-              spy={true}
-              hashSpy={true}
-              smooth={true}
-              duration={500}
-              delay={100}
-            >
-              Interests
-            </Link>
-          </li>
+          {navigationLinks.map((link) => {
+            return (
+              <li className="nav-item">
+                <Link
+                  className="nav-link"
+                  style={linkStyle}
+                  activeClass="active"
+                  to={link}
+                  spy={true}
+                  hashSpy={true}
+                  smooth={true}
+                  duration={500}
+                  delay={100}
+                >
+                  {link}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>
