@@ -10,9 +10,12 @@ function Experience(props) {
                 <div className="flex-grow-1">
                   <h3 className="mb-0">{experienceData.position}</h3>
                   <div className="subheading mb-3">
-                    {experienceData.organization}
+                    {experienceData.organization} • {experienceData.city},{" "}
+                    {experienceData.country}
                   </div>
-                  <p>{experienceData.aboutWork}</p>
+                  {experienceData.aboutWork.map((bullet) => {
+                    return <p>{bullet}</p>;
+                  })}
                 </div>
                 <div className="flex-shrink-0">
                   <span className="text-primary">
