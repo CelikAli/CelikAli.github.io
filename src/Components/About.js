@@ -4,12 +4,12 @@ function About(props) {
       <section className="resume-section" id="about">
         <div className="resume-section-content">
           <h1 className="mb-0">
-            {props.landing.firstName}
+            {props.landing.firstName + " "}
             <span className="text-primary">{props.landing.lastName}</span>
           </h1>
           <div className="subheading mb-5">
             {props.landing.address} · {props.landing.phoneNumber} ·
-            <a href="mailto:name@email.com">{props.landing.email}</a>
+            <a href="mailto:aliemrecelik17@gmail.com">{props.landing.email}</a>
           </div>
           <p className="lead mb-5">{props.landing.bio}</p>
           <div className="social-icons">
