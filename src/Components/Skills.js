@@ -1,5 +1,5 @@
 function Skills(props) {
-  const defaultColor = "#495057";
+  const defaultColor = "#535b62";
 
   return (
     <div>
