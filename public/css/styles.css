@@ -10536,5 +10536,6 @@ section.resume-section .resume-section-content {
 #about {
   background-image: url(../assets/img/istanbulPhoto2.jpg);
   max-width: 90rem;
-  background-size: 260%;
+  background-size: 3600px;
+  background-repeat: no-repeat;
 }
